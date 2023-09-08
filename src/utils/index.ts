@@ -1,3 +1,3 @@
 export const mergeClassNames = (...classNames: string[]) => {
-  return classNames.filter(Boolean).join(" ");
+  return classNames.filter(Boolean).join(' ');
 };

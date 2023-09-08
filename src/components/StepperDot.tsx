@@ -1,6 +1,7 @@
-import React, { useMemo } from "react";
-import { View } from "react-native";
-import { mergeClassNames } from "../utils";
+import React, { useMemo } from 'react';
+import { View } from 'react-native';
+
+import { mergeClassNames } from '@src/utils';
 
 type Props = {
   color?: string;
@@ -15,8 +16,8 @@ type DotProps = {
 };
 
 const colors = {
-  active: "bg-primary-500 dark:bg-primary-dark-500",
-  inactive: "bg-primary-200 dark:bg-primary-dark-200",
+  active: 'bg-primary-500 dark:bg-primary-dark-500',
+  inactive: 'bg-primary-200 dark:bg-primary-dark-200',
 };
 
 export default function StepperDot({
@@ -30,12 +31,12 @@ export default function StepperDot({
       const isCurrent = i === currentDot;
       const bgColor = isCurrent ? color || colors.active : colors.inactive;
       const className = mergeClassNames(
-        "rounded-full",
+        'rounded-full',
         bgColor,
-        isCurrent ? "w-6" : "w-2",
-        isCurrent ? "h-4/5" : "h-2",
-        "pl-2",
-        props.dotClassName ?? ""
+        isCurrent ? 'w-6' : 'w-2',
+        isCurrent ? 'h-4/5' : 'h-2',
+        'pl-2',
+        props.dotClassName ?? '',
       );
 
       return <View className={className} key={i} />;

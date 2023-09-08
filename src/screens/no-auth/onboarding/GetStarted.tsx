@@ -1,28 +1,27 @@
-import { StatusBar } from "expo-status-bar";
-import React from "react";
-import { Dimensions, Image, Text, View } from "react-native";
-import Button from "../../../components/Button";
-import { useColorScheme } from "nativewind";
-import { NativeStackScreenProps } from "@react-navigation/native-stack";
-import { RootStackParamList } from "../../../types/navigation";
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { RootStackParamList } from '@src/types/navigation';
+import { StatusBar } from 'expo-status-bar';
+import { useColorScheme } from 'nativewind';
+import React from 'react';
+import { Button, Dimensions, Image, Text, View } from 'react-native';
 
-type Props = NativeStackScreenProps<RootStackParamList, "Onboarding", "">;
+type Props = NativeStackScreenProps<RootStackParamList, 'Onboarding', ''>;
 
 export default function GetStarted({ navigation }: Props) {
-  const { width } = Dimensions.get("screen");
+  const { width } = Dimensions.get('screen');
   const { colorScheme } = useColorScheme();
 
   const goToOnboardingSteps = () => {
-    navigation.push("Onboarding", {
-      screen: "OnboardingSteps",
+    navigation.push('Onboarding', {
+      screen: 'OnboardingSteps',
     });
   };
 
   return (
     <View className="flex flex-1 bg-[#6C5CFF]">
-      <StatusBar style={colorScheme === "dark" ? "light" : "dark"} />
+      <StatusBar style={colorScheme === 'dark' ? 'light' : 'dark'} />
       <Image
-        source={require("../../../../assets/stepper/GetStarted.jpg")}
+        source={require('@assets/stepper/GetStarted.jpg')}
         style={{ width: width, height: width }}
       />
       <View className="grow rounded-t-3xl bg-bg dark:bg-bg-dark flex flex-1 items-center">

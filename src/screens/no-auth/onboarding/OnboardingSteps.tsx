@@ -1,19 +1,14 @@
-import {
-  View,
-  Text,
-  Touchable,
-  TouchableOpacity,
-  LayoutChangeEvent,
-  Image,
-} from "react-native";
-import React from "react";
-import StepperDot from "../../../components/StepperDot";
-import StepperButtonBG from "../../../assets/StepperButtonBG";
-import Button from "../../../components/Button";
-import { useColorScheme } from "nativewind";
-import FirstStep from "./stepper/FirstStep";
-import SecondStep from "./stepper/SecondStep";
-import ThirdStep from "./stepper/ThirdStep";
+import { useColorScheme } from 'nativewind';
+import React from 'react';
+import { Image, LayoutChangeEvent, TouchableOpacity, View } from 'react-native';
+
+import StepperButtonBG from '@src/assets/StepperButtonBG';
+
+import Button from '@src/components/Button';
+import StepperDot from '@src/components/StepperDot';
+import FirstStep from './stepper/FirstStep';
+import SecondStep from './stepper/SecondStep';
+import ThirdStep from './stepper/ThirdStep';
 
 type Props = {};
 
@@ -33,8 +28,6 @@ const OnboardingSteps = ({}: Props) => {
     const { height } = event.nativeEvent.layout;
     setStepperButtonTextHeight(height);
   };
-
-  console.log(stepperButtonHeight, stepperButtonTextHeight);
 
   const top = stepperButtonHeight / 2;
 
@@ -82,9 +75,7 @@ const OnboardingSteps = ({}: Props) => {
             style={{ top }}
             onLayout={handleStepperButtonTextLayout}
           >
-            <Image
-              source={require("../../../../assets/stepper/ArrowRight.png")}
-            />
+            <Image source={require('@assets/stepper/ArrowRight.png')} />
           </View>
         </TouchableOpacity>
       </View>
@@ -106,7 +97,7 @@ type StepProps = {
 //           resizeMode="stretch"
 //         />
 //         <Image
-//           source={require("../../../../assets/Step1.png")}
+//           source={require("@assets/Step1.png")}
 //           className="absolute inset-0 w-full h-full top-4"
 //           resizeMode="center"
 //         />

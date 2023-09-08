@@ -1,7 +1,8 @@
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { OnboardingNavigator } from "./onboarding-navigator";
-import { RootStackParamList } from "../types/navigation";
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+import { OnboardingNavigator } from '@src/navigation/onboarding-navigator';
+import { RootStackParamList } from '@src/types/navigation';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
@@ -11,7 +12,7 @@ function Root() {
       screenOptions={{
         headerShown: false,
         gestureEnabled: false,
-        animation: "none",
+        animation: 'none',
       }}
     >
       <Stack.Group>

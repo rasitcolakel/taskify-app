@@ -1,7 +1,5 @@
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import * as React from "react";
-import Onboarding from "../screens/no-auth/onboarding/OnboardingSteps";
-import GetStarted from "../screens/no-auth/onboarding/GetStarted";
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import * as React from 'react';
 
 export type AuthStackParamList = {
   Onboarding: undefined;

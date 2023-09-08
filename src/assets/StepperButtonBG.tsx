@@ -1,8 +1,8 @@
-import { styled } from "nativewind";
-import * as React from "react";
-import Svg, { Path, SvgProps } from "react-native-svg";
+import { styled } from 'nativewind';
+import * as React from 'react';
+import Svg, { Path, SvgProps } from 'react-native-svg';
 
-const StyledPath = styled(Path, { classProps: ["fill", "stroke"] });
+const StyledPath = styled(Path, { classProps: ['fill', 'stroke'] });
 
 function StepperButtonBG({ fill, ...props }: SvgProps) {
   return (
