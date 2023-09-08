@@ -1,0 +1,13 @@
+{
+  "trailingComma": "all",
+  "singleQuote": true,
+  "semi": true,
+  "plugins": [
+    "@trivago/prettier-plugin-sort-imports",
+    "prettier-plugin-organize-imports"
+  ],
+  "importOrder": ["^@assets/(.*)$", "^@src/(.*)$", "^[./]"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "importRemoveUnusedImports": true
+}
