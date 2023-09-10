@@ -60,8 +60,6 @@ const StepImage = () => {
         className="w-7/12 self-end absolute bottom-4 right-8"
         entering={FadeInUp.duration(350)}
         resizeMode="contain"
-        xMultiplier={1}
-        yMultiplier={3}
       />
       <MovingImage
         source={image2}
@@ -85,8 +83,8 @@ type MovingImageProps = AnimateProps<ImageProps> & {
 };
 
 const MovingImage = ({
-  xMultiplier = 3,
-  yMultiplier = 3,
+  xMultiplier = 2,
+  yMultiplier = 2,
   ...props
 }: MovingImageProps) => {
   const translateX = useSharedValue(0);
